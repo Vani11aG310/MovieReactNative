@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Container from './Container';
 import Theatre from './TheatrePage';
+import Trailer from './TrailerPage';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import 'react-native-gesture-handler';
@@ -12,6 +13,9 @@ const RootStack = createStackNavigator(
     },
     Details: {
       screen:Theatre
+    },
+    Trailer: {
+      screen:Trailer
     },
   },
   {

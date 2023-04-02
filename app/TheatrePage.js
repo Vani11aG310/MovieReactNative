@@ -25,11 +25,11 @@ class Theatre extends Component {
             headers: {
                 'Content-type': 'application/json',
                 'api-version': 'v200',
-                'Authorization': 'Basic QlJJVF9YWDpQWFZiSk83c2NKMUU=',
+                'Authorization': 'Basic QlJJVF8wX1hYOnFaU3hKVmluNFNEVQ==',
                 'Geolocation': '-22.0;14.0',
-                'client': 'BRIT',
-                'x-api-key': 'hMel9FnKzP9kWlBZs4bEn7V0uw9XvZ5P88RIMq48',
-                'device-datetime': '2022-12-05T11:25:00.007Z',
+                'client': 'BRIT_0',
+                'x-api-key': 'of9ldEtPBP5OiYHSg7u1p6OHK8zg1Ljp36yLoCX0',
+                'device-datetime': '2023-04-02T11:25:00.007Z',
                 'territory': 'XX'
             }
         })
@@ -59,8 +59,13 @@ class Theatre extends Component {
 
     renderItem = (data) => {
         return (
-            <TouchableOpacity style={styles.list}>
+            <TouchableOpacity style={styles.list} onPress={() => 
+                this.props.navigation.navigate('Trailer', {
+                    film_id: data.item.film_id,
+                    film_name: data.item.film_name,
+                })}>
                 <Text style={styles.lightText}>{data.item.film_name}</Text>
+                <Text style={styles.lightText}>Watch the trailer</Text>
             </TouchableOpacity>
         )
     

@@ -25,6 +25,9 @@ const styles = {
         paddingVertical: 4,
         margin: 5,
         backgroundColor: "#fff"
+    },
+    video: {
+        justifyContent: "center",
     }
 };
 export default styles;
